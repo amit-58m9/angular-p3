@@ -1,0 +1,118 @@
+<nav class="navbar navbar-fixed-top navbar-dark" style='background-color: #666' >
+  <div class="container">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776</button>
+    <div class="collapse navbar-toggleable-xs" id="#exCollapsingNavbar"></div>
+    <a class="navbar-brand" href="#">Dream Bean</a>
+    <div class="nav navbar-nav">
+      <a class="nav-item nav-link active" href="#">
+      Home <span class="sr-only">(current)</span>
+      </a>
+      <a class="nav-item nav-link" href="#">Products</a>
+      <a class="nav-item nav-link" href="#">Checkout</a>
+      <a class="nav-item nav-link" href="#">Sign out</a>
+    </div>
+    <ul class="nav navbar-nav pull-xs-right">
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"     aria-haspopup="true" aria-expanded="false">Cart</a>
+      <div class="dropdown-menu">
+        <span>The Cart Placeholder</span>
+      </div>
+      </li>
+    </ul>
+  </div> 
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          Quick Shop
+        </div>
+        <div class="card-block">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- /.card -->
+      <div class="card">
+        <div class="card-header">Categories</div>
+        <div class="card-block">
+          <div class="list-group">
+            <a href="#" class="list-group-item">All</a>
+            <a href="#" class="list-group-item">Meat</a>
+            <a href="#" class="list-group-item">Seafood</a>
+            <a href="#" class="list-group-item">Bakery</a>
+            <a href="#" class="list-group-item">Dairy</a>
+            <a href="#" class="list-group-item">Fruit & Vegetables</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+      <div class="card">
+        <img class="card-img-top img-fluid center-block product-item" src="http://placehold.it/270x171" alt="Product 1">
+        <div class="card-block text-xs-center">
+          <h4 class="card-title">Product 1</h4>
+          <h4 class="card-subtitle">
+            <span class="tag tag-success">$10</span>
+          </h4>
+          <hr>
+          <div class="btn-group" role="group">
+            <button class="btn btn-primary">Buy</button>
+            <button class="btn btn-info">Info</button>
+          </div>
+        </div>
+      </div>
+<!-- /.card -->
+    </div>
+  </div>
+  <!-- /.row -->
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdownMenu">
+    <table class="table table-bordered table-inverse">
+      <thead>
+        <tr>
+          <th>Name</th><th>Amount</th><th>Qty</th><th>Sum</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align:center">Total:<strong>$20.00</strong><br>
+            <div class="btn-group">
+              <button class="btn btn-primary">View Cart</button>
+              <button class="btn btn-success">Checkout</button>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td >Product 1</td><td >$10</td><td >x1<br>
+            <span class="delete-cart">Del</span>
+          </td>
+          <td >$10.00</td>
+        </tr>
+        <tr>
+          <td >Product 2</td><td >$5.00</td><td >x2<br>
+            <span class="delete-cart">Del</span>
+          </td>
+          <td >$10.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- /.container -->
+<footer class="footer">
+  <div class="container">
+  <address>
+    <strong>Contact Info</strong><br>0000 Market St, Suite 000, San Francisco, CA 00000,
+    (123) 456-7890, <a href="mailto:#">support@dream-bean.com</a>
+  </address>
+  </div>
+</footer>

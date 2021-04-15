@@ -1,0 +1,93 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-header">Quick Shop</div>
+				<div class="input-group">
+					<input #search type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+						<button class="btn btn-secondary" type="button" (click)="searchProduct(search.value)">Go!
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					Categories
+				</div>
+				<div class="card-block">
+					<div class="list-group">
+						<a href="#" class="list-group-item">All</a>
+						<a href="#" class="list-group-item">Meat</a>
+						<a href="#" class="list-group-item">Seafood</a>
+						<a href="#" class="list-group-item">Bakery</a>
+						<a href="#" class="list-group-item">Dairy</a>
+						<a href="#" class="list-group-item">Fruit & Vegetables</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-lg-4">
+					<div class="card">
+						<img class="card-img-top img-fluid center-block product-item" src="http://placehold.it/270x171" alt="Product 1">
+						<div class="card-block text-xs-center">
+							<h4 class="card-title">Product 1</h4>
+							<h4 class="card-subtitle">
+								<span class="tag tag-success">$10</span>
+							</h4>
+							<hr>
+							<div class="btn-group" role="group">
+								<button class="btn btn-primary">Buy</button>
+								<button class="btn btn-info">Info</button>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<!-- /.col -->
+				<div class="col-xs-12 col-sm-6 col-lg-4">
+					<!-- The Product 2 -->
+				</div>
+				<!-- /.col -->
+				<div class="col-xs-12 col-sm-6 col-lg-4">
+					<!-- The Product N -->
+				</div>
+				<!-- /.col -->
+			</div>
+		</div>
+		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdownMenu">
+			<table class="table table-bordered table-inverse">
+				<thead>
+					<tr>
+						<th>Name</th><th>Amount</th><th>Qty</th><th>Sum</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="4" style="text-align:center">Total:<strong>$20.00</strong><br>
+							<div class="btn-group">
+								<button class="btn btn-primary">View Cart</button>
+								<button class="btn btn-success">Checkout</button>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td >Product 1</td><td >$10</td><td >x1<br>
+							<span class="delete-cart">Del</span>
+						</td>
+						<td >$10.00</td>
+					</tr>
+					<tr>
+						<td >Product 2</td><td >$5.00</td><td >x2<br>
+							<span class="delete-cart">Del</span>
+						</td>
+						<td >$10.00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
