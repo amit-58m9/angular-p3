@@ -2,10 +2,14 @@
 * Angular Imports
 */
 import {Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 /*
 * Components
 */
-import {Product, getProducts} from './product';
+
+import {Product,ProductService} from './product.service';
+import { CartService } from '../cart/cart.service';
+
 @Component({
 	selector: 'db-product-grid',
 	templateUrl: 'app/product/product-grid.component.html'
@@ -13,37 +17,15 @@ import {Product, getProducts} from './product';
 
 export class ProductGridComponent {
 	products: any = [];
+	cartService: CartService =new CartService();
+	productService: ProductService= new ProductService();
 
-	constructor() {
-		let index = 0;
-		let products: Product[] = getProducts();
-		let length = products.length;
-		this.products = [];
-		while (length) {
-			let row: Product[] = [];
-			if (length >= 3) {
-				for (let i = 0; i < 3; i++) {
-					row.push(products[index++]);
-				}
-				this.products.push(row);
-				length -= 3;
-			} 
-			else 
-			{
-				for (; length > 0; length--) {
-					row.push(products[index++]);
-				}
-				this.products.push(row);
-			}
-		}
-	}
-
-	constructor(private router: ActivatedRouter) {
+	constructor(private router: ActivatedRoute) {
 		this.router.queryParams.subscribe(params => {
 			let category: string = params['category'];
 			let search: string = params['search'];
 			// Return filtered data from getProducts function
-			let products: Product[] =getProducts(category, search);
+			let products: Product[] =this.productService.getProducts(category, search);
 			// Transform products to appropriate data
 			// to display
 			this.products = this.transform(products);

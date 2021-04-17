@@ -15,7 +15,14 @@ export class CategoryTitlePipe implements PipeTransform {
 	constructor(private categoryService: CategoryService) { }
 
 	transform(value: string): string {
-		let category: Category = this.categoryService.getCategory(value);
+		let category: Category;
+	try{
+		 category = this.categoryService.getCategory(value);
+		}
+		catch(e: any)
+		{
+
+		}
 		return category ? category.title : '';
 	}
 }

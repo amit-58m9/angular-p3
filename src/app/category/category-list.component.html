@@ -2,9 +2,7 @@
 	<div class="card-header">Categories</div>
 	<div class="card-block">
 		<div class="list-group list-group-flush">
-			<a class="list-group-item" *ngFor="let category of categories" 
-			(click)="filterProducts(category)">
-			{{category.title}}</a>
+			<a class="list-group-item" *ngFor="let category of categories" (click)="filterProducts(category)">{{category.title}}</a>
 		</div>
 	</div>
 </div>

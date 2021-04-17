@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {Category} from './category';
+import {Category} from './category.service';
 import {Router} from '@angular/router';
 
 @Component({

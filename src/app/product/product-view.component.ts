@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, ProductService } from './product.service';
 import { Cart, CartItem, CartService } from '../cart/cart.service';
+
 @Component({
 	selector: 'db-product-view',
 	templateUrl: 'app/product/product-view.component.html'
@@ -10,7 +11,8 @@ import { Cart, CartItem, CartService } from '../cart/cart.service';
 export class ProductViewComponent {
 	product: Product;
 	cartItem: CartItem;
-	
+	private cartService: CartService= new CartService();
+	private productService: ProductService= new ProductService();
 	get quantity(): number {
 		return this.cartItem ? this.cartItem.count : 0;
 	}
@@ -19,7 +21,7 @@ export class ProductViewComponent {
 		return this.cartItem ? this.cartItem.amount : 0;
 	}
 
-	constructor(private route: ActivatedRoute,private productService: ProductService,private cartService: CartService) {
+	constructor(private route: ActivatedRoute) {
 		this.route.params.subscribe(params => {
 			// Get the product id
 			let id: string = params['id'];

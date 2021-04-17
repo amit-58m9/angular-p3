@@ -40,6 +40,7 @@ export class CartService{
 		this.cart.count++;
 		// Increase amount in the cart
 		this.cart.amount += product.price;
+		return item;
 	}
 
 	removeProduct(product: Product) {
@@ -60,6 +61,7 @@ export class CartService{
 			// Decrease amount in the cart
 			this.cart.amount -= product.price;
 		}
+		return item;
 	}
 
 	removeItem(item: CartItem) {
@@ -71,7 +73,7 @@ export class CartService{
 		this.cart.amount -= item.amount;
 	}
 
-	private findItem(id: string): CartItem {
+	findItem(id: string): CartItem {
 		for (let i = 0; i < this.cart.items.length; i++) {
 			if (this.cart.items[i].product.id === id) {
 				return this.cart.items[i];
@@ -80,7 +82,7 @@ export class CartService{
 		return null;
 	}
 
-	private remove(item: CartItem) {
+	remove(item: CartItem) {
 		// Find the index of cart item
 		let indx: number = this.cart.items.indexOf(item);
 		// Check was item found

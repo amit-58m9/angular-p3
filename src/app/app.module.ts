@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {LocationStrategy, HashLocationStrategy ,PathLocationStrategy} from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RouterModule} from '@angular/router';
 /**
 * Modules
 */
@@ -27,7 +28,7 @@ import {routing} from './app.routes';
   ],
   imports: [
     BrowserModule,CartModule,FormsModule, ReactiveFormsModule,
-    AppRoutingModule,CategoryModule, ProductModule],
+    AppRoutingModule,CategoryModule, ProductModule,RouterModule],
  
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

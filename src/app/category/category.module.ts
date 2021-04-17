@@ -11,8 +11,8 @@ import {CategoryTitlePipe} from './category.pipe';
 
 @NgModule({
 	imports: [CommonModule, RouterModule],
-	declarations: [CategoryCardComponent, CategorySlideComponent],
-	exports: [CategoryCardComponent, CategorySlideComponent],
+	declarations: [CategoryCardComponent, CategorySlideComponent,CategoryListComponent],
+	exports: [CategoryCardComponent, CategorySlideComponent,CategoryListComponent],
 	providers: [CategoryService]
 })
 

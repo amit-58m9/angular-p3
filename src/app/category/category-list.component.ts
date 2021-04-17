@@ -6,15 +6,16 @@ import {Router} from '@angular/router';
 
 /*
 * Components
+* import {Category, getCategories} from './category';
 */
-import {Category, getCategories} from './category';
+
 
 import {Category, CategoryService} from './category.service';
 
 
 @Component({
-selector: 'db-category-list',
-templateUrl: 'app/category/category-list.component.html'
+	selector: 'db-category-list',
+	templateUrl: 'app/category/category-list.component.html'
 })
 
 export class CategoryListComponent {
